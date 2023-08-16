@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Bapp Er Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="css/bank.css" />
+  </head>
+  <body>
+    <main>
+      <section class="main-section w-9/12 mx-auto">
+        <h1
+          class="text-center text-5xl text-amber-600 italic mt-8 border-b-2 pb-3"
+        >
+          Welcome To Your
+          <span class="text-yellow-800">Bank Account </span>
+        </h1>
+        <section class="grid grid-cols-3 px-8 py-7 bg- gap-9">
+          <div>
+            <h3>Deposit :</h3>
+            <p>$ <span id="deposit-total">00</span></p>
+          </div>
+          <div>
+            <h3>Withdraw :</h3>
+            <p>$ <span id="withdraw-total">00</span></p>
+          </div>
+          <div>
+            <h3>balance :</h3>
+            <p>$ <span id="balance-total">1550</span></p>
+          </div>
+        </section>
+        <section class="grid grid-cols-2 px-8 py-7 bg- gap-9">
+          <!-- deposit-input-field side -->
+          <div>
+            <h3>Please Deposit</h3>
+            <input
+              id="deposit-input-field"
+              class="input-field"
+              type="text"
+              placeholder="Deposit Amount"
+            />
+            <button id="deposit-btn" class="submit-btn">Deposit</button>
+          </div>
+          <!-- withdraw input side -->
+          <div>
+            <h3>Please Withdraw</h3>
+            <input
+              id="withdraw-input-field"
+              class="input-field"
+              type="text"
+              placeholder="Withdraw Amount"
+            />
+            <button id="withdraw-btn" class="submit-btn">Withdraw</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script src="js/deposti.js"></script>
+    <script src="js/withdraw.js"></script>
+  </body>
+</html>
