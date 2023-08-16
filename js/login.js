@@ -15,5 +15,8 @@ document.getElementById("submit-btn").addEventListener("click", function () {
     return (window.location.href = "bank.html");
   } else {
     alert("Please enter your valid email and password.");
+    passwordField.value = "";
+    emailField.value = "";
+    return;
   }
 });

@@ -11,6 +11,12 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
   }
   if (newDepositAmountString < 0) {
     alert("Please enter a positive amount.");
+    depositInputField.value = "";
+    return;
+  }
+  if (isNaN(newDepositAmountString)) {
+    alert("Input is not a number.");
+    depositInputField.value = "";
     return;
   }
 

@@ -11,9 +11,14 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
   }
   if (withdrawInputFieldString < 0) {
     alert("Please enter a positive amount.");
+    withdrawInputField.value = "";
     return;
   }
-
+  if (isNaN(withdrawInputFieldString)) {
+    alert("Input is not a number.");
+    withdrawInputField.value = "";
+    return;
+  }
   // step 2: Total withdraw
   const withdrawTotal = document.getElementById("withdraw-total");
   const withdrawTotalString = withdrawTotal.innerText;
