@@ -2,16 +2,27 @@ body {
   margin: 0;
   padding: 0;
 }
-.header {
-  font-size: 30px;
-  color: rgb(245, 111, 15);
+.header2 {
+  font-size: 40px;
+  font-weight: 700;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 80px;
   padding-top: 15px;
+  background: linear-gradient(360deg, red, red, rgb(21, 12, 118), red, red);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .main-section {
   border-radius: 10px;
   background-color: rgba(159, 243, 243, 0.798);
+}
+.section-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.section-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .main-section div:nth-child(1) {
   border-radius: 5px;
@@ -51,4 +62,82 @@ body {
   border-radius: 5px;
   display: block;
   font-size: 20px;
+  transition: 0.5s;
+}
+.submit-btn:hover {
+  background-color: rgb(39, 39, 109);
+}
+/* *************** media Query (max-width: 992px) *************** */
+@media screen and (max-width: 992px) {
+  /* *************** Login section *************** */
+
+  .header {
+    font-size: 40px;
+  }
+  /* *************** Account section *************** */
+  .header2 {
+    font-size: 30px;
+    margin-top: 50px;
+  }
+  .main-section div h3 {
+    font-size: 22px;
+  }
+  .input-field {
+    width: 80%;
+    font-size: 16px;
+  }
+  .section-1 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+/* *************** media Query(max-width: 768px) *************** */
+
+@media screen and (max-width: 768px) {
+  /* *************** Login section *************** */
+  .header {
+    font-size: 30px;
+  }
+  #form-section {
+    width: 90%;
+    background-color: rgb(67, 66, 92);
+    padding: 30px 20px 30px 20px;
+    box-shadow: 5px -5px 50px gray;
+  }
+  .login-bank-account {
+    background: linear-gradient(360deg, red, red, rgb(218, 220, 207), red, red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 23px;
+  }
+  
+  /* *************** Account section *************** */
+  .section-2 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .header2 {
+    font-size: 20px;
+    margin-top: 50px;
+  }
+}
+/* *************** media Query(max-width: 576px) *************** */
+@media screen and (max-width: 576px) {
+  /* *************** Login section *************** */
+
+  .header {
+    font-size: 20px;
+  }
+  /* *************** Account section *************** */
+  .input-field {
+    padding-left: 8px;
+  }
+
+  .input-field::placeholder {
+    font-size: 14px;
+  }
+  .submit-btn {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
 }
