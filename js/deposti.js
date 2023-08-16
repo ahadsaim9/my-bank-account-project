@@ -9,6 +9,14 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
     alert("Please enter your amount.");
     return;
   }
+  if (newDepositAmountString < 0) {
+    alert("Please enter a positive amount.");
+    return;
+  }
+  if (typeof newDepositAmountString == "string") {
+    alert("Please enter the number.");
+    return;
+  }
   // step 2:
   const depositTotal = document.getElementById("deposit-total");
 

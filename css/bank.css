@@ -49,6 +49,7 @@ body {
 .input-field {
   height: 32px;
   width: 60%;
+  list-style: none;
 
   padding-left: 20px;
   font-size: 18px;
@@ -110,7 +111,7 @@ body {
     -webkit-background-clip: text;
     font-size: 23px;
   }
-  
+
   /* *************** Account section *************** */
   .section-2 {
     grid-template-columns: 1fr;
