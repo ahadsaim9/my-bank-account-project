@@ -13,10 +13,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function () {
     alert("Please enter a positive amount.");
     return;
   }
-  if (typeof withdrawInputFieldString == "string") {
-    alert("Please enter the number.");
-    return;
-  }
+
   // step 2: Total withdraw
   const withdrawTotal = document.getElementById("withdraw-total");
   const withdrawTotalString = withdrawTotal.innerText;
