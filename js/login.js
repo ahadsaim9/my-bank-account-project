@@ -10,10 +10,10 @@ document.getElementById("submit-btn").addEventListener("click", function () {
   //Step 4: verify email and password
   if (
     emailFieldValue === "ahadsaim9@gmail.com" &&
-    (passwordFieldValue === "04995191asm" || passwordFieldValue === "123456789")
+    passwordFieldValue === "123456789"
   ) {
     return (window.location.href = "bank.html");
   } else {
-    alert("Bank ta ki apnar bapar...? je chailey dhukte parben.");
+    alert("Please enter your email and password.");
   }
 });
