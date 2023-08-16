@@ -2,8 +2,13 @@
 document.getElementById("withdraw-btn").addEventListener("click", function () {
   // step 1: new withdraw amount
   const withdrawInputField = document.getElementById("withdraw-input-field");
-  const withdrawInputFieldString = (withdrawInputField.value = 0);
+  const withdrawInputFieldString = withdrawInputField.value;
   const newWithdrawAmount = parseFloat(withdrawInputFieldString);
+
+  if (withdrawInputFieldString == "") {
+    alert("Please enter your amount.");
+    return;
+  }
   // step 2: Total withdraw
   const withdrawTotal = document.getElementById("withdraw-total");
   const withdrawTotalString = withdrawTotal.innerText;

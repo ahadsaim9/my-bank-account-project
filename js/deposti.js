@@ -3,8 +3,12 @@ document.getElementById("deposit-btn").addEventListener("click", function () {
   // step 1:
   const depositInputField = document.getElementById("deposit-input-field");
 
-  const newDepositAmountString = (depositInputField.value = 0);
+  const newDepositAmountString = depositInputField.value;
   const newDepositAmount = parseFloat(newDepositAmountString);
+  if (newDepositAmountString == "") {
+    alert("Please enter your amount.");
+    return;
+  }
   // step 2:
   const depositTotal = document.getElementById("deposit-total");
 
